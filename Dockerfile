@@ -79,7 +79,7 @@ COPY openssl.cnf /etc/stunnel/
 COPY stunnel.conf.template /etc/stunnel/
 
 ENV STUNNEL_CONF /etc/stunnel/stunnel.conf
-ENV STUNNEL_CONF_TEMPLATE "${STUNNEL_CONF_TEMPLATE:-/etc/stunnel.conf.template}"
+ENV STUNNEL_CONF_TEMPLATE "${STUNNEL_CONF_TEMPLATE:-/etc/stunnel/stunnel.conf.template}"
 
 LABEL org.label-schema.name="bcit/openshift-stunnel" \
       org.label-schema.description="Stunnel on Alpine" \
