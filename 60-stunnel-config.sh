@@ -29,6 +29,4 @@ cp -v ${STUNNEL_CAFILE} /usr/local/share/ca-certificates/stunnel-ca.crt
 cp -v ${STUNNEL_CRT} /usr/local/share/ca-certificates/stunnel.crt
 update-ca-certificates
 
-if [[ ! -s ${STUNNEL_CONF} ]]; then
-    cat /etc/stunnel/stunnel.conf.template | envsubst > ${STUNNEL_CONF}
-fi
+cat /etc/stunnel/stunnel.conf.template | envsubst > ${STUNNEL_CONF}
