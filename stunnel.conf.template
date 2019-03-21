@@ -1,4 +1,4 @@
-cert = ${STUNNEL_CRT}
+cert = ${STUNNEL_CERT}
 key = ${STUNNEL_KEY}
 
 pid = /var/run/stunnel/stunnel.pid
@@ -6,7 +6,7 @@ pid = /var/run/stunnel/stunnel.pid
 socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
-CAfile = ${STUNNEL_CAFILE}
+CAfile = ${STUNNEL_CACERT}
 verifyChain = ${STUNNEL_VERIFY_CHAIN}
 
 debug = ${STUNNEL_DEBUG}
