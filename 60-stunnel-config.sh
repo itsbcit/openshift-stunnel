@@ -12,7 +12,8 @@ if [[ ! -f ${STUNNEL_KEY} ]]; then
         exit 1
     fi
 
-    openssl req -x509 -nodes -rand /dev/random -days 365 -newkey rsa:2048 -keyout ${STUNNEL_KEY} -out ${STUNNEL_CRT} \
+        openssl req -x509 -nodes -rand ${RANDOM_SOURCE} -days 365 -newkey rsa:2048 \
+        -keyout ${STUNNEL_KEY} -out ${STUNNEL_CERT} \
         -config /etc/stunnel/openssl.cnf
 fi
 
