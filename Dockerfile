@@ -78,8 +78,15 @@ COPY 60-stunnel-config.sh /docker-entrypoint.d/
 COPY openssl.cnf /etc/stunnel/
 COPY stunnel.conf.template /etc/stunnel/
 
+ENV STUNNEL_CACERT "/etc/stunnel/stunnel-ca.crt"
+ENV STUNNEL_CLIENT no
 ENV STUNNEL_CONF /etc/stunnel/stunnel.conf
-ENV STUNNEL_CONF_TEMPLATE "${STUNNEL_CONF_TEMPLATE:-/etc/stunnel/stunnel.conf.template}"
+ENV STUNNEL_CONF_TEMPLATE /etc/stunnel/stunnel.conf.template
+ENV STUNNEL_CERT /etc/stunnel/stunnel.pem
+ENV STUNNEL_DEBUG 6
+ENV STUNNEL_KEY  /etc/stunnel/stunnel.key
+ENV STUNNEL_VERIFY_CHAIN no
+ENV RANDOM_SOURCE /dev/urandom
 
 LABEL org.label-schema.name="bcit/openshift-stunnel" \
       org.label-schema.description="Stunnel on Alpine" \
