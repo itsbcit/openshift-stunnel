@@ -1,5 +1,5 @@
 if [[ -z "${STUNNEL_SERVICE}" ]] || [[ -z "${STUNNEL_ACCEPT}" ]] || [[ -z "${STUNNEL_CONNECT}" ]]; then
-    echo >&2 "one or more STUNNEL_SERVICE* values missing: "
+    echo >&2 "one or more STUNNEL_* values missing: "
     echo >&2 "  STUNNEL_SERVICE=${STUNNEL_SERVICE}"
     echo >&2 "  STUNNEL_ACCEPT=${STUNNEL_ACCEPT}"
     echo >&2 "  STUNNEL_CONNECT=${STUNNEL_CONNECT}"
