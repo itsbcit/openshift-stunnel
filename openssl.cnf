@@ -1,5 +1,3 @@
-RANDFILE                = /dev/urandom
-
 [ req ]
 default_bits            = 2048
 default_keyfile         = /etc/stunnel/stunnel.key
