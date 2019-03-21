@@ -28,17 +28,17 @@ RUN apk add --no-cache \
         zlib-dev
 
 WORKDIR /tmp
-RUN wget https://www.stunnel.org/downloads/stunnel-5.46.tar.gz \
- && tar -zxvf stunnel-5.46.tar.gz
+RUN wget https://www.stunnel.org/downloads/stunnel-5.50.tar.gz \
+ && tar -zxvf stunnel-5.50.tar.gz
 
-WORKDIR /tmp/stunnel-5.46
+WORKDIR /tmp/stunnel-5.50
 RUN ./configure \
  && make \
  && cp src/stunnel /usr/local/bin/stunnel
 
 WORKDIR /
 
-RUN rm -rf /tmp/stunnel-5.46
+RUN rm -rf /tmp/stunnel-5.50
 RUN apk del \
 		gcc \
 		make \
