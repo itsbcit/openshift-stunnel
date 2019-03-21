@@ -1,12 +1,3 @@
-export STUNNEL_CAFILE="${STUNNEL_CAFILE:-/etc/ssl/certs/ca-certificates.crt}"
-export STUNNEL_CLIENT="${STUNNEL_CLIENT:-no}"
-export STUNNEL_CONF="${STUNNEL_CONF:-/etc/stunnel/stunnel.conf}"
-export STUNNEL_CONF_TEMPLATE="${STUNNEL_CONF_TEMPLATE:-/etc/stunnel/stunnel.conf.template}"
-export STUNNEL_CRT="${STUNNEL_CRT:-/etc/stunnel/stunnel.pem}"
-export STUNNEL_DEBUG="${STUNNEL_DEBUG:-5}"
-export STUNNEL_KEY="${STUNNEL_KEY:-/etc/stunnel/stunnel.key}"
-export STUNNEL_VERIFY_CHAIN="${STUNNEL_VERIFY_CHAIN:-no}"
-
 if [[ -z "${STUNNEL_SERVICE}" ]] || [[ -z "${STUNNEL_ACCEPT}" ]] || [[ -z "${STUNNEL_CONNECT}" ]]; then
     echo >&2 "one or more STUNNEL_SERVICE* values missing: "
     echo >&2 "  STUNNEL_SERVICE=${STUNNEL_SERVICE}"
