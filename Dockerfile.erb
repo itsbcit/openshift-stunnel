@@ -28,10 +28,10 @@ RUN apk add --no-cache \
         zlib-dev
 
 WORKDIR /tmp
-RUN wget https://www.stunnel.org/downloads/stunnel-5.55.tar.gz \
- && tar -zxvf stunnel-5.55.tar.gz
+RUN wget https://www.stunnel.org/downloads/stunnel-<%= image.labels['stunnel_version'] %>.tar.gz \
+ && tar -zxvf stunnel-<%= image.labels['stunnel_version'] %>.tar.gz
 
-WORKDIR /tmp/stunnel-5.55
+WORKDIR /tmp/stunnel-<%= image.labels['stunnel_version'] %>
 RUN ./configure \
  && make \
  && cp src/stunnel /usr/local/bin/stunnel
@@ -39,14 +39,7 @@ RUN ./configure \
 WORKDIR /
 
 FROM bcit/alpine:3.10
-LABEL maintainer="jesse_weisner@bcit.ca"
-LABEL stunnel_version="5.55"
-LABEL org.label-schema.name="bcit/openshift-stunnel"
-LABEL org.label-schema.description="Stunnel on Alpine"
-LABEL org.label-schema.url="https://github.com/itsbcit/openshift-stunnel/"
-LABEL org.label-schema.vcs-url="https://github.com/itsbcit/openshift-stunnel/"
-LABEL org.label-schema.schema-version="1.0"
-LABEL build_id="1568399194"
+<%= snippet('labels', binding) -%>
 
 RUN apk add --no-cache \
         ca-certificates \

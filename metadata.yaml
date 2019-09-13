@@ -1,0 +1,12 @@
+---
+image_name: openshift-stunnel
+labels:
+  maintainer: 'jesse_weisner@bcit.ca'
+  stunnel_version: '5.55'
+  org.label-schema.name: "bcit/openshift-stunnel"
+  org.label-schema.description: "Stunnel on Alpine"
+  org.label-schema.url: "https://github.com/itsbcit/openshift-stunnel/"
+  org.label-schema.vcs-url: "https://github.com/itsbcit/openshift-stunnel/"
+  org.label-schema.schema-version: "1.0"
+suffixes:
+  - '5'
