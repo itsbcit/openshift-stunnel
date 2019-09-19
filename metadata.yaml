@@ -10,3 +10,4 @@ labels:
   org.label-schema.schema-version: "1.0"
 suffixes:
   - '5'
+  - '5.55'
