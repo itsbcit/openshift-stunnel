@@ -39,6 +39,7 @@ RUN ./configure \
 WORKDIR /
 
 FROM bcit/alpine:3.10
+FROM bcit.io/alpine:3.13
 <%= snippet('labels', binding) -%>
 
 RUN apk add --no-cache \

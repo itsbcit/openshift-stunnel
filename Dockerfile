@@ -38,7 +38,7 @@ RUN ./configure \
 
 WORKDIR /
 
-FROM bcit/alpine:3.10
+FROM bcit.io/alpine:3.13
 LABEL maintainer="jesse_weisner@bcit.ca"
 LABEL stunnel_version="5.55"
 LABEL org.label-schema.name="bcit/openshift-stunnel"
